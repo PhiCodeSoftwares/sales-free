@@ -11,13 +11,13 @@ const App = () => {
     <Router>
       <div className="flex">
         <Sidebar />
-        
+
         <div className="flex-grow p-4">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/calculate-price" element={<CalculatePrice />} />
-            <Route path="/sales" element={<Sales />} />
+            <Route path="/sales-free/home" element={<Home />} />
+            <Route path="/sales-free/products" element={<Products />} />
+            <Route path="/sales-free/calculate-price" element={<CalculatePrice />} />
+            <Route path="/sales-free/sales" element={<Sales />} />
           </Routes>
         </div>
       </div>
