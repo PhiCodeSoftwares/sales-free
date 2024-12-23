@@ -1,9 +1,4 @@
-export const calculatePrice = ({ purchasePrice, taxes, pricingType, pricingValue }) => {
+export const calculatePrice = ({ purchasePrice, taxes, profitValue }) => {
     const basePrice = parseFloat(purchasePrice) + parseFloat(taxes);
-    if (pricingType === "margin") {
-      return basePrice * (1 + parseFloat(pricingValue) / 100);
-    } else if (pricingType === "markup") {
-      return basePrice / (1 - parseFloat(pricingValue) / 100);
-    }
-    return basePrice;
+    return basePrice / (1 - (parseFloat(profitValue) / 100));
   };

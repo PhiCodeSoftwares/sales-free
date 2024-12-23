@@ -6,8 +6,7 @@ const CalculatePrice = () => {
     name: "",
     purchasePrice: 0,
     taxes: 0,
-    pricingType: "margin",
-    pricingValue: 0,
+    profitValue: 0,
     unit: "",
     stock: 0,
   });
@@ -63,23 +62,12 @@ const CalculatePrice = () => {
             onChange={handleChange}
           />
 
-          <label className="block text-sm font-medium text-gray-700">Tipo de Precificação</label>
-          <select
-            name="pricingType"
-            className="w-full p-2 border border-gray-300 rounded"
-            value={product.pricingType}
-            onChange={handleChange}
-          >
-            <option value="margin">Margem</option>
-            <option value="markup">Markup</option>
-          </select>
-
-          <label className="block text-sm font-medium text-gray-700">Valor do Tipo de Precificação</label>
+          <label className="block text-sm font-medium text-gray-700">Margem de Lucro</label>
           <input
             type="number"
-            name="pricingValue"
+            name="profitValue"
             className="w-full p-2 border border-gray-300 rounded"
-            value={product.pricingValue}
+            value={product.profitValue}
             onChange={handleChange}
           />
 
