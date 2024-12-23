@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Sales Free
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based web application designed to calculate product prices, manage products, and track sales. The app is fully functional for local use with caching, dynamic data handling, and export/import capabilities, and it is free to use under the MIT license.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 1. Product Management
+- Add, edit, or delete products.
+- View a paginated list of products (25 items per page).
+- Includes fields for:
+  - Name
+  - Purchase Price
+  - Taxes
+  - Pricing Type (Margin or Markup)
+  - Pricing Value
+  - Unit (kg, ml, etc.)
+  - Stock quantity
 
-### `npm start`
+### 2. Pricing Calculation
+- Real-time product price calculation based on:
+  - Margin or Markup.
+  - Purchase price and taxes.
+- Dynamic labels to display calculated product prices.
+- Handles invalid inputs (e.g., negative numbers) with error messages.
+- Resets form inputs to default values.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Sales Management
+- Placeholder menu for "Sell Now" and "My Sales."
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. Export and Import
+- Export product data to a CSV file.
+- Import product data from a CSV file.
 
-### `npm test`
+### 5. Sidebar Navigation
+- A responsive sidebar menu that adapts to mobile and desktop views.
+- Includes navigation for:
+  - Products (with submenus: Calculate Price, Products)
+  - Sales (with submenus: Sell Now, My Sales)
+  - Export and Import
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/product-pricing-app.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
+```bash
+cd product-pricing-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+5. Open the app in your browser:
+```
+http://localhost:3000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigate to **Products** to manage and view your product list.
+- Use **Calculate Price** to calculate product prices dynamically.
+- Access **Export and Import** to save or load product data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**: Frontend framework.
+- **React Router**: For navigation and routing.
+- **Tailwind CSS**: For UI styling.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Please submit a pull request or open an issue for suggestions and fixes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
