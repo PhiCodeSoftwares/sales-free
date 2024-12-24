@@ -1,4 +1,4 @@
-const Sales = () => {
+const OrderService = () => {
     return (
         <div className="min-h-screen p-4 bg-gray-50">
             
@@ -6,4 +6,4 @@ const Sales = () => {
     )
 }
 
-export default Sales;
+export default OrderService;

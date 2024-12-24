@@ -52,13 +52,15 @@ const Sidebar = () => {
                     Home
                 </Link>
             </li>
+
+            <li className="font-semibold">
+              <Link to="/sales-free/calculate-price" onClick={() => setIsOpen(false)}>
+                    Calculadora de Preço
+                </Link>
+            </li>
+            
             <li className="font-semibold">Produtos</li>
             <ul className="ml-4 space-y-2">
-                <li>
-                <Link to="/sales-free/calculate-price" onClick={() => setIsOpen(false)}>
-                    Calcular Preço
-                </Link>
-                </li>
                 <li>
                 <Link to="/sales-free/products" onClick={() => setIsOpen(false)}>
                     Produtos
@@ -66,24 +68,80 @@ const Sidebar = () => {
                 </li>
             </ul>
             
-            <li className="font-semibold">Vendas</li>
+            <li className="font-semibold">Serviços</li>
+            <ul className="ml-4 space-y-2">
+                <li>
+                <Link to="/sales-free/services" onClick={() => setIsOpen(false)}>
+                    Serviços
+                </Link>
+                </li>
+            </ul>
+
+              <li className="font-semibold">Vendas</li>
                 <ul className="ml-4 space-y-2">
                     <li>
-                    <Link to="/sales-free/sales" onClick={() => setIsOpen(false)}>
-                        Vender agora
+                      <Link to="/sales-free/sale" onClick={() => setIsOpen(false)}>
+                          Vender agora
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/sales" onClick={() => setIsOpen(false)}>
+                          Minhas vendas
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/order-service" onClick={() => setIsOpen(false)}>
+                          Ordem de Serviço
+                      </Link>
+                    </li>
+                </ul>
+              <li className="font-semibold">Insights</li>
+                <ul className="ml-4 space-y-2">
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                          Visão geral
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                          Desempenho
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                          Comportamento dos Clientes
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                        Receita e Lucratividade
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                        Análise de Tendências
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                        Relatórios
+                      </Link>
+                    </li>
+                </ul>
+            
+              <li className="font-semibold">Configurações</li>
+                <ul className="ml-4 space-y-2">
+                    <li>
+                    <Link to="/sales-free/settings" onClick={() => setIsOpen(false)}>
+                      Exportar e Importar
                     </Link>
                     </li>
                     <li>
-                    <Link to="/sales-free/sales" onClick={() => setIsOpen(false)}>
-                        Minhas vendas
+                    <Link to="/sales-free/settings" onClick={() => setIsOpen(false)}>
+                        Tipo de acesso
                     </Link>
                     </li>
                 </ul>
-            <li className="font-semibold">
-                <Link to="/sales-free/export-import" onClick={() => setIsOpen(false)}>
-                Exportar e Importar
-                </Link>
-            </li>
         </ul>
       </div>
     </div>

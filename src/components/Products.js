@@ -1,4 +1,3 @@
-// Products.js
 import React, { useState, useEffect } from "react";
 
 const Products = () => {
@@ -10,7 +9,6 @@ const Products = () => {
   const ITEMS_PER_PAGE = 25;
 
   useEffect(() => {
-    // Load products from local storage on component mount
     const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
     setProducts(storedProducts);
   }, []);
@@ -52,7 +50,7 @@ const Products = () => {
     <div className="min-h-screen p-4 bg-gray-50">
       <h1 className="text-3xl font-semibold mb-4">Produtos</h1>
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mb-4"
+        className="bg-primary text-onPrimary px-4 py-2 rounded hover:bg-primary mb-4"
         onClick={() => {
           setShowModal(true);
           setEditProduct(null);
@@ -60,6 +58,7 @@ const Products = () => {
       >
         Adicionar Produto
       </button>
+
       <div className="bg-white rounded shadow p-4">
         <table className="table-auto w-full mb-4">
           <thead>
@@ -78,7 +77,7 @@ const Products = () => {
                 <td className="px-4 py-2">{product.stock}</td>
                 <td className="px-4 py-2">
                   <button
-                    className="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 mr-2"
+                    className="bg-warning text-onBackground px-2 py-1 rounded hover:bg-opacity-80 mr-2"
                     onClick={() => {
                       setEditProduct(product);
                       setShowModal(true);
@@ -87,7 +86,7 @@ const Products = () => {
                     Editar
                   </button>
                   <button
-                    className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                    className="bg-error text-onBackground px-2 py-1 rounded hover:bg-opacity-80"
                     onClick={() => handleDeleteProduct(product.id)}
                   >
                     Excluir
@@ -197,14 +196,14 @@ const ProductModal = ({ product, onClose, onSave }) => {
           <div className="flex justify-end space-x-2">
             <button
               type="button"
-              className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+              className="bg-gray text-white px-4 py-2 rounded hover:bg-opacity-80"
               onClick={onClose}
             >
               Cancelar
             </button>
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-80"
             >
               Salvar
             </button>

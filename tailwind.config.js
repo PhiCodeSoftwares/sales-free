@@ -9,6 +9,11 @@ module.exports = {
       'onSecondary': '#ffffff',
       'background': '#092d36',
       'onBackground': '#ffffff',
+      'white': '#ffffff',
+      'black': '#000000',
+      'gray': '#808080',
+      'error': '#E80000',
+      'warning': '#FF6600'
     },
     extend: {},
   },
