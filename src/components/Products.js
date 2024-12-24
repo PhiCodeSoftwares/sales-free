@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ProductModal from "./modals/ProductModal";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -129,87 +130,6 @@ const Products = () => {
           }}
         />
       )}
-    </div>
-  );
-};
-
-const ProductModal = ({ product, onClose, onSave }) => {
-  const [formData, setFormData] = useState(
-    product || {
-      id: Date.now(),
-      name: "",
-      price: 0,
-      stock: 0,
-    }
-  );
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSave({ ...formData, price: parseFloat(formData.price), stock: parseInt(formData.stock) });
-  };
-
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
-        <h2 className="text-xl font-semibold mb-4">
-          {product ? "Editar Produto" : "Adicionar Produto"}
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Nome</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Preço</label>
-            <input
-              type="number"
-              name="price"
-              value={formData.price}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Estoque</label>
-            <input
-              type="number"
-              name="stock"
-              value={formData.stock}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="flex justify-end space-x-2">
-            <button
-              type="button"
-              className="bg-gray text-white px-4 py-2 rounded hover:bg-opacity-80"
-              onClick={onClose}
-            >
-              Cancelar
-            </button>
-            <button
-              type="submit"
-              className="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-80"
-            >
-              Salvar
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
   );
 };
