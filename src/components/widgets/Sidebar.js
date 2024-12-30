@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png"
+import logo from "../../images/logo.png"
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,6 +73,15 @@ const Sidebar = () => {
                 <li>
                 <Link to="/sales-free/services" onClick={() => setIsOpen(false)}>
                     Serviços
+                </Link>
+                </li>
+            </ul>
+
+            <li className="font-semibold">Clientes</li>
+            <ul className="ml-4 space-y-2">
+                <li>
+                <Link to="/sales-free/customers" onClick={() => setIsOpen(false)}>
+                  Clientes
                 </Link>
                 </li>
             </ul>
