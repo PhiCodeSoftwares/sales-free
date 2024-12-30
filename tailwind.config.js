@@ -13,7 +13,14 @@ module.exports = {
       'black': '#000000',
       'gray': '#808080',
       'error': '#E80000',
-      'warning': '#FF6600'
+      'warning': '#FF6600',
+      'success': '#28a745',
+      'info': '#17a2b8',
+      'light': '#f8f9fa',
+      'dark': '#343a40',
+      'muted': '#6c757d',
+      'accent': '#e83e8c',
+      'onAccent': '#ffffff'
     },
     extend: {},
   },
