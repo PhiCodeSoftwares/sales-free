@@ -80,7 +80,7 @@ const Sidebar = () => {
               <li className="font-semibold">Vendas</li>
                 <ul className="ml-4 space-y-2">
                     <li>
-                      <Link to="/sales-free/sale" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/pdv" onClick={() => setIsOpen(false)}>
                           Vender agora
                       </Link>
                     </li>

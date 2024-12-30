@@ -6,7 +6,7 @@ import CalculatePrice from "./components/CalculatePrice";
 import Sales from "./components/Sales";
 import Home from "./components/Home";
 import ExportImport from "./components/ExportImport";
-import Sale from "./components/Sale";
+import PDVScreen from "./components/PDV";
 import Insights from "./components/Insights";
 import Settings from "./components/Settings";
 import OrderService from "./components/OrderService";
@@ -25,7 +25,7 @@ const App = () => {
 
             <Route path="/sales-free/products" element={<Products />} />
             <Route path="/sales-free/calculate-price" element={<CalculatePrice />} />
-            <Route path="/sales-free/sale" element={<Sale />} />
+            <Route path="/sales-free/pdv" element={<PDVScreen />} />
             <Route path="/sales-free/sales" element={<Sales />} />
             <Route path="/sales-free/order-service" element={<OrderService />} />
             <Route path="/sales-free/insights" element={<Insights />} />

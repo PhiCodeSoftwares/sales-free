@@ -6,13 +6,23 @@ const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showModal, setShowModal] = useState(false);
   const [editProduct, setEditProduct] = useState(null);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   const ITEMS_PER_PAGE = 25;
 
   useEffect(() => {
-    const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
-    setProducts(storedProducts);
+    const cachedProducts = localStorage.getItem("products");
+    if (cachedProducts) {
+      setProducts(JSON.parse(cachedProducts));
+    }
+    setIsInitialLoad(false);
   }, []);
+
+  useEffect(() => {
+    if (!isInitialLoad) {
+      localStorage.setItem("products", JSON.stringify(products));
+    }
+  }, [products, isInitialLoad]);
 
   const saveProductsToStorage = (updatedProducts) => {
     localStorage.setItem("products", JSON.stringify(updatedProducts));
