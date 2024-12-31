@@ -35,8 +35,8 @@ const CustomerModal = ({ customer, onClose, onSave }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-6 rounded shadow-md w-full max-w-3xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-white text-dark p-6 rounded shadow-md w-full max-w-4xl overflow-y-auto max-h-[90vh]">
         <h2 className="text-xl font-semibold mb-4">
           {customer ? "Editar Cliente" : "Adicionar Cliente"}
         </h2>

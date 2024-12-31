@@ -7,11 +7,12 @@ import Sales from "./components/Sales";
 import Home from "./components/Home";
 import ExportImport from "./components/ExportImport";
 import PDVScreen from "./components/PDV";
-import Insights from "./components/Insights";
 import Settings from "./components/Settings";
 import Services from "./components/Services";
 import Customers from "./components/Custormers";
 import OrderServiceList from "./components/OrderService";
+import Overview from "./components/Overview";
+import Performance from "./components/Performance";
 
 const App = () => {
   return (
@@ -32,7 +33,8 @@ const App = () => {
             <Route path="/sales-free/pdv" element={<PDVScreen />} />
             <Route path="/sales-free/sales" element={<Sales />} />
             <Route path="/sales-free/order-service" element={<OrderServiceList />} />
-            <Route path="/sales-free/insights" element={<Insights />} />
+            <Route path="/sales-free/overview" element={<Overview />} />
+            <Route path="/sales-free/performance" element={<Performance />} />
             <Route path="/sales-free/export-import" element={<ExportImport />} />
             <Route path="/sales-free/settings" element={<Settings />} />
           </Routes>

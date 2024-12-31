@@ -107,32 +107,32 @@ const Sidebar = () => {
               <li className="font-semibold">Insights</li>
                 <ul className="ml-4 space-y-2">
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/overview" onClick={() => setIsOpen(false)}>
                           Visão geral
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/performance" onClick={() => setIsOpen(false)}>
                           Desempenho
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/overview" onClick={() => setIsOpen(false)}>
                           Comportamento dos Clientes
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/overview" onClick={() => setIsOpen(false)}>
                         Receita e Lucratividade
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/overview" onClick={() => setIsOpen(false)}>
                         Análise de Tendências
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sales-free/insights" onClick={() => setIsOpen(false)}>
+                      <Link to="/sales-free/overview" onClick={() => setIsOpen(false)}>
                         Relatórios
                       </Link>
                     </li>
